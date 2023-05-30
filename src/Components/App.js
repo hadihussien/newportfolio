@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Home />
-      <Fade direction="right">
+      <Fade right>
         <Bio />
         <Portfolio />
         <Services />

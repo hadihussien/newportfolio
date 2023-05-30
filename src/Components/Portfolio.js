@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState}  from 'react'
 import Project from './projects'
 import photographer from '../images/portfolio/photographer.jpg'
 import linkshorten from '../images/portfolio/short.PNG'
