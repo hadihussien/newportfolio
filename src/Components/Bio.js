@@ -4,7 +4,7 @@ import p1 from '../images/pexels-djordje-petrovic-2102416.jpg'
 export default function Bio() {
     return (
         <div>
-            <div id='Bio' className='bio min-[991px]:flex justify-between gap-10 items-center px-[2em] min-[560px]:px-[4em] md:px-[5rem] py-24 overflow-hidden' animated='scrolled animated'>
+            <section id='Bio' className='bio min-[991px]:flex justify-between gap-10 items-center px-[2em] min-[560px]:px-[4em] md:px-[5rem] py-24 overflow-hidden' animated='scrolled animated'>
                 <div className='img-container flex-1'>
                     <img src={p1} alt='sdad'></img>
                 </div>
@@ -42,11 +42,11 @@ export default function Bio() {
                         </div>
                     </div>
                     <div className=''>
-                        <a className='bg-[#96bb7c] text-white rounded-full py-3 px-7 mr-4' href='#Contact' >Hire Me</a>
-                        <a href={require('../resume.pdf')} download='resume' className='bg-[#5a6268] text-white rounded-full py-3 px-7'>Download CV</a>
+                        <a className='bg-[#96bb7c] text-white rounded-full py-3 max-[300px]:block inline-block px-7 mr-4' href='#Contact' >Hire Me</a>
+                        <a href={require('../resume.pdf')} download='resume' className='max-[300px]:block inline-block bg-[#5a6268] text-white rounded-full py-3 px-7'>Download CV</a>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     )
 }

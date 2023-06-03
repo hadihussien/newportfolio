@@ -6,7 +6,7 @@ import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 
 export default function Services() {
     return (
-        <div id='Services' className='services py-12'>
+        <section id='Services' className='services py-12'>
             <h1 className='main-heading text-center my-10'>Services</h1>
             <div className='flex flex-col mx-4 gap-6 sm:flex-row'>
                 <div className='service-unit text-center p-8'>
@@ -25,6 +25,6 @@ export default function Services() {
                     <p className='text-[#939393]'>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

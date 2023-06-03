@@ -24,10 +24,10 @@ export default function Contact() {
     })
     return (
         <div>
-            <div id = 'Contact' className='contact py-12'>
+            <section id = 'Contact' className='contact py-12 px-8'>
                 <h1 className='main-heading text-center my-16  font-medium'>Contact Me</h1>
-                <div className='flex justify-center flex-col container m-auto lg:flex-row'>
-                    <form ref={form} onSubmit={sendmessage} className='my-4 px-8 lg:basis-3/5'>
+                <div className='flex justify-center flex-col container m-auto lg:flex-row gap-6'>
+                    <form ref={form} onSubmit={sendmessage} className='my-4 lg:basis-3/5'>
                         <div className='flex mb-4'>
                             <div className='basis-1/2 me-3'>
                                 <label className='text-base text-[#939393]'>First Name</label>
@@ -64,7 +64,7 @@ export default function Contact() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     )
 }

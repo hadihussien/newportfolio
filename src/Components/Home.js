@@ -5,17 +5,36 @@ import '../index.css'
 
 export default function Home() {
   const [active, setActive] = useState(false);
-  const [isIntersecting, setIntersecting] = useState(false);
+  const [Intersecting, setIntersecting] = useState(false);
+  const [Navactive, setNavActive] = useState('Home');
   const ref = useRef(null);
   const handleClick = () => {
     setActive(!active)
   }
   useEffect(() => {
-    const Navbar = document.querySelector('.navbar')
+    let sections = document.querySelectorAll('section'); 
+    let links = document.querySelectorAll('.navbar ul li a')
+    window.onscroll = () => {
+      var current = "";
+      sections.forEach(section => {
+        if(window.scrollY >= section.getBoundingClientRect().top){
+          current = section.getAttribute('id');
+        }
+      })
+      links.forEach(link => {
+        link.classList.remove('active');
+        if(link.textContent === current){
+          link.classList.add('active');
+        }
+      })
+    }
+  },[window.scrollY])
+  useEffect(() => {
+    const Navbar = document.querySelector('.navbar');
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIntersecting(entry.isIntersecting);
-        if (!isIntersecting) {
+        if (!Intersecting) {
           Navbar.classList.add('blacking');
         }
         else {
@@ -25,17 +44,25 @@ export default function Home() {
       { rootMargin: "-200px" }
     );
     observer.observe(ref.current);
-  }, [isIntersecting])
+    document.querySelectorAll(".navbar ul li a").forEach((link) => {
+      if (link.textContent === Navactive) {
+        link.classList.add("active");
+      }
+      else{
+        link.classList.remove("active");
+      }
+    })
+  })
   return (
-    <div ref={ref} id='Home' className='Home h-[100vh] relative overflow-hidden'>
+    <section ref={ref} id='Home' className='Home h-[100vh] relative overflow-hidden'>
       <div className='navbar flex justify-between absolute w-screen top-0 px-8 sm:px-20 py-3 items-center z-10'>
         <a href='/Home' className='text-white logo'>HH</a>
         <ul className='flex flex-row max-[991px]:hidden'>
-          <li><a href='#Home' className='pr-4 active'>Home</a></li>
-          <li><a href='#Bio' className='pr-4'>About</a></li>
-          <li><a href='#Portfolio' className='pr-4'>Portfolio</a></li>
-          <li><a href='#Services' className='pr-4'>Services</a></li>
-          <li><a href='#Contact' className='pr-4'>Contact</a></li>
+          <li><a href='#Home' className='pr-4 active' onClick={() => setNavActive('Home')}>Home</a></li>
+          <li><a href='#Bio' className='pr-4' onClick={() => setNavActive('Bio')}>Bio</a></li>
+          <li><a href='#Portfolio' className='pr-4' onClick={() => setNavActive('Portfolio')}>Portfolio</a></li>
+          <li><a href='#Services' className='pr-4' onClick={() => setNavActive('Services')}>Services</a></li>
+          <li><a href='#Contact' className='pr-4' onClick={() => setNavActive('Contact')}>Contact</a></li>
         </ul>
         <a href='#' className='navIcon' onClick={handleClick}>
           <span></span>
@@ -50,13 +77,13 @@ export default function Home() {
           <FontAwesomeIcon className='absolute right-4 top-4' icon={faTimes} />
         </a>
         <ul className='flex flex-col pb-4 pt-12 sm:py-12 px-4'>
-          <li className='mb-4' onClick={() => setActive(false)}><a href='#Home' className='pr-4 text-black hover:text-[#96bb7c] transition'>Home</a></li>
+          <li className='mb-4' onClick={() => setActive(false)}><a href='#Home' className='active pr-4 text-black hover:text-[#96bb7c] transition'>Home</a></li>
           <li className='mb-4' onClick={() => setActive(false)}><a href='#Portfolio' className='pr-4 text-black hover:text-[#96bb7c] transition'>Portfolio</a></li>
           <li className='mb-4' onClick={() => setActive(false)}><a href='#Services' className='pr-4 text-black hover:text-[#96bb7c] transition'>Services</a></li>
           <li className='mb-4' onClick={() => setActive(false)}><a href='#Contact' className='pr-4 text-black hover:text-[#96bb7c] transition'>Contact</a></li>
           <li className='mb-4' onClick={() => setActive(false)}><a href='#bio-content' className='pr-4 text-black hover:text-[#96bb7c] transition'>About</a></li>
         </ul>
       </div>
-    </div>
+    </section>
   )
 }

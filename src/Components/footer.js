@@ -6,7 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export default function footer() {
     return (
-        <div className='bg-[#efefef] py-16'>
+        <section id="footer" className='bg-[#efefef] py-16'>
             <div className='container flex flex-col m-auto justify-center lg:flex-row'>
                 <div className='mb-10 lg:basis-1/3'>
                     <h1 className='text-base'>About Me</h1>
@@ -27,6 +27,6 @@ export default function footer() {
                     <span className='text-[#777]'>hadi.hussien.1993@gmail.com</span>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
