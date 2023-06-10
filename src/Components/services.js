@@ -12,17 +12,17 @@ export default function Services() {
                 <div className='service-unit text-center p-8'>
                     <FontAwesomeIcon className='text-[#96bb7c] text-5xl mb-3' icon={faDisplay}/>
                     <h3 className='text-lg mb-3'>Development</h3>
-                    <p className='text-[#939393]'>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p className='text-[#939393]'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste pariatur eaque amet repellendus quidem expedita magnam, temporibus vel possimus ipsam unde fuga debitis.</p>
                 </div>
                 <div className='service-unit text-center p-8'>
                     <FontAwesomeIcon className='text-[#96bb7c] text-5xl mb-3' icon={faCompassDrafting}/>
                     <h3 className='text-lg mb-3'>Development</h3>
-                    <p className='text-[#939393]'>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p className='text-[#939393]'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste pariatur eaque amet repellendus quidem expedita magnam, temporibus vel possimus ipsam unde fuga debitis.</p>
                 </div>
                 <div className='service-unit text-center p-8'>
                     <FontAwesomeIcon className='text-[#96bb7c] text-5xl mb-3' icon={faBasketShopping}/>
                     <h3 className='text-lg mb-3'>E Commerce</h3>
-                    <p className='text-[#939393]'>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p className='text-[#939393]'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste pariatur eaque amet repellendus quidem expedita magnam, temporibus vel possimus ipsam unde fuga debitis.</p>
                 </div>
             </div>
         </section>
