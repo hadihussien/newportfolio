@@ -12,23 +12,26 @@ export default function Home() {
     setActive(!active)
   }
   useEffect(() => {
-    let sections = document.querySelectorAll('section'); 
-    let links = document.querySelectorAll('.navbar ul li a')
-    window.onscroll = () => {
+    let sections = document.querySelectorAll('section');
+    let links = document.querySelectorAll('.navbar ul li a');
+    window.addEventListener("scroll", () => {
       var current = "";
       sections.forEach(section => {
-        if(window.scrollY >= section.getBoundingClientRect().top){
+        let sectionTop = section.getBoundingClientRect().top - 10
+        if (window.scrollY >= sectionTop + window.scrollY) {
           current = section.getAttribute('id');
         }
       })
       links.forEach(link => {
-        link.classList.remove('active');
-        if(link.textContent === current){
+        if (link.textContent == current) {
           link.classList.add('active');
         }
+        else {
+          link.classList.remove('active');
+        }
       })
-    }
-  },[window.scrollY])
+    })
+  }, [])
   useEffect(() => {
     const Navbar = document.querySelector('.navbar');
     const observer = new IntersectionObserver(
@@ -48,7 +51,7 @@ export default function Home() {
       if (link.textContent === Navactive) {
         link.classList.add("active");
       }
-      else{
+      else {
         link.classList.remove("active");
       }
     })
