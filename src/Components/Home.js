@@ -23,7 +23,7 @@ export default function Home() {
         }
       })
       links.forEach(link => {
-        if (link.textContent == current) {
+        if (link.textContent === current) {
           link.classList.add('active');
         }
         else {
@@ -67,18 +67,18 @@ export default function Home() {
           <li><a href='#Services' className='pr-4' onClick={() => setNavActive('Services')}>Services</a></li>
           <li><a href='#Contact' className='pr-4' onClick={() => setNavActive('Contact')}>Contact</a></li>
         </ul>
-        <a href='#' className='navIcon' onClick={handleClick}>
+        <span className='navIcon cursor-pointer' onClick={handleClick}>
           <span></span>
-        </a>
+        </span>
       </div>
       <h1 className='absolute top-1/2 text-white left-1/2 -translate-x-1/2  w-[100%] text-[30px] md:text-[50px] text-center font-bold'>I'm Hadi Hussien<br />
         A Front End Developer
       </h1>
       <div className={active ? 'sidenav w-[100%] bg-white shadow text-black after:hidden sm:w-[30%] sm:h-screen fixed right-0 z-10 sm:after:block sm:after:left-[-100vw]'
         : 'sidenav  h-screen fixed -right-[266px] sm:after:left-[-220vw]'}>
-        <a href='#' className='text-xl relative block' onClick={handleClick}>
+        <span className='cursor-pointer text-xl relative block' onClick={handleClick}>
           <FontAwesomeIcon className='absolute right-4 top-4' icon={faTimes} />
-        </a>
+        </span>
         <ul className='flex flex-col pb-4 pt-12 sm:py-12 px-4'>
           <li className='mb-4' onClick={() => setActive(false)}><a href='#Home' className='active pr-4 text-black hover:text-[#96bb7c] transition'>Home</a></li>
           <li className='mb-4' onClick={() => setActive(false)}><a href='#Portfolio' className='pr-4 text-black hover:text-[#96bb7c] transition'>Portfolio</a></li>

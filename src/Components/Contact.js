@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGlobe,faEnvelope,faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope,faPhone,faMapLocation} from '@fortawesome/free-solid-svg-icons'
 import emailjs from '@emailjs/browser'
 
 export default function Contact() {
@@ -59,8 +59,8 @@ export default function Contact() {
                             <span>hadi.hussien.1993@gmail.com</span>
                         </p>
                         <p className='flex text-[#96bb7c] items-center gap-1 mb-4'>
-                            <FontAwesomeIcon icon={faGlobe} className='me-1' />
-                            <span>hadi.hussien.1993@gmail.com</span>
+                            <FontAwesomeIcon icon={faMapLocation} className='me-1' />
+                            <span>Syria, Damascus</span>
                         </p>
                     </div>
                 </div>
