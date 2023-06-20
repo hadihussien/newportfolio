@@ -42,7 +42,7 @@ export default function Bio() {
                     </div>
                     <div className=''>
                         <a className='bg-[#96bb7c] text-white rounded-full py-3 max-[300px]:block inline-block px-7 mr-4' href='#Contact' >Hire Me</a>
-                        <a href={require('../resume.pdf')} download='resume' className='max-[300px]:block inline-block bg-[#5a6268] text-white rounded-full py-3 px-7'>Download CV</a>
+                        <a href={require('../Hadi Hussien.pdf')} download='resume' className='max-[300px]:block inline-block bg-[#5a6268] text-white rounded-full py-3 px-7'>Download CV</a>
                     </div>
                 </div>
             </section>
